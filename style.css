@@ -1,0 +1,282 @@
+body{
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+background-image:url("https://images.unsplash.com/photo-1519501025264-65ba15a82390");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
+margin-top:40px;
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+function showCityCrowd(){
+
+let areaCount = {}
+
+updates.forEach(update=>{
+
+if(!update.location) return
+
+areaCount[update.location] = 
+(areaCount[update.location] || 0) + 1
+
+})
+
+let sorted = Object.entries(areaCount)
+.sort((a,b)=>b[1]-a[1])
+
+let top = sorted.slice(0,3)
+
+let html=""
+
+top.forEach(area=>{
+
+let level="Calm"
+
+if(area[1] >= 3) level="Medium"
+if(area[1] >= 5) level="Busy"
+
+html += `<p>🌆 ${area[0]} — ${level}</p>`
+
+})
+
+document.getElementById("cityBox").innerHTML =
+html || "Collecting area data..."
+
+}
+
+h1{
+text-align:center;
+font-size:40px;
+color:#00f7ff;
+text-shadow:0 0 10px #00f7ff;
+margin-bottom:5px;
+}
+
+.subtitle{
+text-align:center;
+color:#ccc;
+margin-bottom:25px;
+}
+
+.input-box{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+input,select{
+padding:12px;
+border-radius:8px;
+border:none;
+background:rgba(255,255,255,0.1);
+color:white;
+flex:1;
+}
+
+input::placeholder{
+color:#ccc;
+}
+
+button{
+padding:12px 20px;
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.search{
+width:100%;
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:rgba(0,0,0,0.3);
+border-radius:10px;
+overflow:hidden;
+}
+
+th,td{
+padding:14px;
+text-align:left;
+}
+
+th{
+background:rgba(255,255,255,0.1);
+}
+
+tr{
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.low{
+background:rgba(46,204,113,0.3);
+}
+
+.medium{
+background:rgba(241,196,15,0.3);
+}
+
+.high{
+background:rgba(231,76,60,0.3);
+}
+
+@media(max-width:600px){
+.input-box{
+flex-direction:column;
+}
+}
+.hero{
+text-align:center;
+margin-top:40px;
+}
+
+.hero-title{
+font-size:45px;
+color:#00f7ff;
+text-shadow:0 0 20px #00f7ff;
+}
+
+.hero-sub{
+color:#ddd;
+margin-bottom:30px;
+}
+
+.how{
+text-align:center;
+margin-bottom:30px;
+}
+
+.how-box{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+
+.step{
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+width:250px;
+margin:10px;
+}
+.popular{
+margin-bottom:20px;
+}
+
+#popularBox{
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:10px;
+}
+.best{
+margin-bottom:20px;
+}
+
+#bestBox{
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:10px;
+}
+.alternatives{
+margin-bottom:20px;
+}
+
+#altBox{
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:10px;
+}
+.alert{
+margin-bottom:20px;
+}
+
+#alertBox{
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:10px;
+}
+.area{
+margin-bottom:20px;
+}
+
+#areaBox{
+background:rgba(0,0,0,0.5);
+padding:15px;
+border-radius:10px;
+}
+body{
+font-family: sans-serif;
+margin:0;
+padding:10px;
+}
+
+table{
+width:100%;
+font-size:14px;
+}
+
+input, select, button{
+width:100%;
+margin:5px 0;
+padding:8px;
+}
+
+@media (max-width:600px){
+
+table{
+font-size:12px;
+}
+
+h1{
+font-size:22px;
+}
+
+}
+.smartSection{
+display:flex;
+gap:15px;
+margin:20px 0;
+flex-wrap:wrap;
+}
+
+.smartCard{
+background:rgba(20,20,30,0.8);
+border-radius:12px;
+padding:15px;
+flex:1;
+min-width:250px;
+color:white;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.smartCard h3{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.smartCard p{
+margin:5px 0;
+font-size:14px;
+}

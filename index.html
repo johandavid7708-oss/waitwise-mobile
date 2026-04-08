@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaitWise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Know Before You Go</h1>
+<p class="subtitle">Live Crowd Intelligence</p>
+<p class="subtitle">Live Crowd & Wait Time Updates</p>
+
+<div class="input-box">
+
+<input type="text" id="restaurant" placeholder="Restaurant / Hospital Name">
+
+<input type="text" id="location" placeholder="Area / City">
+
+<select id="crowd">
+<option value="">Select Crowd Level</option>
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+
+<button onclick="addUpdate()">Submit Update</button>
+<div class="hero">
+
+<h1 class="hero-title">Know Before You Go</h1>
+<p class="hero-sub">Live Crowd Intelligence</p>
+
+<div class="how">
+
+<h2>How It Works</h2>
+
+<div class="how-box">
+
+<div class="step">
+<h3>Report Crowd</h3>
+<p>Users submit real-time updates</p>
+</div>
+
+<div class="step">
+<h3>Real Time Analysis</h3>
+<p>WaitWise calculates confidence</p>
+</div>
+
+<div class="step">
+<h3>Best Time To Visit</h3>
+<p>Find lowest crowd instantly</p>
+</div>
+
+<div class="popular">
+
+<h2>🔥 Most Popular Right Now</h2>
+
+<div id="popularBox">
+Collecting data...
+</div>
+
+<div class="best">
+
+<h2>⭐ Best Places Right Now</h2>
+
+<div id="bestBox">
+Collecting data...
+</div>
+
+<div class="alternatives">
+
+<h2>🔄 Smart Alternatives</h2>
+
+<div id="altBox">
+Waiting for data...
+</div>
+
+<div class="city">
+<h2>🌆 City Crowd Intelligence</h2>
+
+<div id="cityBox">
+Analyzing city...
+</div>
+
+<div class="alert">
+
+<h2>⚡ Smart Leave Alert</h2>
+
+<div id="alertBox">
+Analyzing crowd movement...
+</div>
+<div class="area">
+
+<h2>🌆 Area Crowd Intelligence</h2>
+
+<div id="areaBox">
+Analyzing areas...
+</div>
+<div id="smartBox" class="smartBox">
+<h3>🧠 Where Should I Go Now</h3>
+</div>
+<div id="avoidBox" class="avoidBox">
+<h3>⚠️ Avoid These Places</h3>
+</div>
+<div id="areaSuggestBox">
+<h3>🌆 Best Areas Right Now</h3>
+</div>
+<div id="timeBox">
+<h3>⏱️ Time Predictions</h3>
+</div>
+<div class="smartSection">
+
+<div id="avoidBox" class="smartCard">
+<h3>⚠️ Avoid These Places</h3>
+<p>Collecting data...</p>
+</div>
+
+<div id="areaSuggestBox" class="smartCard">
+<h3>🌆 Best Areas Right Now</h3>
+<p>Collecting data...</p>
+</div>
+
+<div id="timeBox" class="smartCard">
+<h3>⏱️ Time Predictions</h3>
+<p>Collecting data...</p>
+</div>
+<div class="smartSection">
+
+<div id="smartSuggest" class="smartCard">
+<h3>🧠 Smart Suggestions</h3>
+<p>Collecting data...</p>
+</div>
+
+<div id="avoidBox" class="smartCard">
+<h3>⚠️ Avoid These Places</h3>
+<p>Collecting data...</p>
+</div>
+
+<div id="areaSuggestBox" class="smartCard">
+<h3>🌆 Best Areas Right Now</h3>
+<p>Collecting data...</p>
+</div>
+
+<div id="timeBox" class="smartCard">
+<h3>⏱️ Time Predictions</h3>
+<p>Collecting data...</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<input 
+type="text" 
+id="search" 
+placeholder="Search restaurant or location..." 
+onkeyup="searchData()"
+class="search"
+/>
+
+<table>
+
+<thead>
+<th>Restaurant</th>
+<th>Location</th>
+<th>Crowd</th>
+<th>Confidence</th>
+<th>Best Time</th>
+<th>Peak Hours</th>
+<th>Trend</th>
+<th>Crowd Score</th>
+<th>Last Updated</th>
+<tr>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
